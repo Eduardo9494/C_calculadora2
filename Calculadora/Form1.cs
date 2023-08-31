@@ -199,6 +199,15 @@ namespace Calculadora
                 string txtResultado = cajaResultado.Text;
                 txtResultado = txtResultado.Substring(0, txtResultado.Length - 1);
 
+                if ( txtResultado.Length == 1 && txtResultado.Contains("-"))
+                {
+                    cajaResultado.Text = "0";
+                }
+                else
+                {
+                    cajaResultado.Text = txtResultado;
+                }
+
                 cajaResultado.Text = txtResultado;
             }
             else
