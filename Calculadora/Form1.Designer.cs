@@ -269,6 +269,7 @@
             btnBorrar.TabIndex = 19;
             btnBorrar.Text = "<";
             btnBorrar.UseVisualStyleBackColor = true;
+            btnBorrar.Click += btnBorrar_Click;
             // 
             // lblHistorial
             // 

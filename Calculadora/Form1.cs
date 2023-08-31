@@ -191,5 +191,20 @@ namespace Calculadora
             lblHistorial.Text = "";
 
         }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            if ( cajaResultado.Text.Length > 1)
+            {
+                string txtResultado = cajaResultado.Text;
+                txtResultado = txtResultado.Substring(0, txtResultado.Length - 1);
+
+                cajaResultado.Text = txtResultado;
+            }
+            else
+            {
+                cajaResultado.Text = "0";
+            }
+        }
     }
 }
