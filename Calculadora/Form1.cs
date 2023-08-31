@@ -1,19 +1,19 @@
 namespace Calculadora
 {
+    public enum Operacion
+    {
+        NoDefinida = 0,
+        Suma = 1,
+        Resta = 2,
+        Division = 3,
+        Multiplicacion = 4,
+        Modulo = 5
+    }
     public partial class Form1 : Form
     {
-        public enum Operacion
-        {
-            NoDefinida = 0,
-            Suma = 1,
-            Resta = 2,
-            Division = 3,
-            Multiplicacion = 4,
-            Modulo = 5
-        }
-
         double valor1 = 0;
         double valor2 = 0;
+        Operacion operador = Operacion.NoDefinida;
 
 
         public Form1()
@@ -110,11 +110,19 @@ namespace Calculadora
             leerNumeros("9");
         }
 
-        private void btnSuma_Click(object sender, EventArgs e)
+        private void ObtenerValor(string operador)
         {
             valor1 = Convert.ToDouble(cajaResultado.Text);
-            lblHistorial.Text = cajaResultado.Text + "+";
+            lblHistorial.Text = cajaResultado.Text + operador;
             cajaResultado.Text = "0";
+        }
+        private void btnSuma_Click(object sender, EventArgs e)
+        {
+            operador = Operacion.Suma;
+            ObtenerValor("+");
+
+
+
         }
 
         private void btnResultado_Click(object sender, EventArgs e)
