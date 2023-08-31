@@ -55,6 +55,7 @@ namespace Calculadora
                     if (valor2 == 0)
                     {
                         MessageBox.Show("No se puede dividir entre 0 ");
+                        resultado = 0;
                     }
                     else
                     {
