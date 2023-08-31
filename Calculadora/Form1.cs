@@ -148,7 +148,13 @@ namespace Calculadora
         private void btnMultiplicar_Click(object sender, EventArgs e)
         {
             operador = Operacion.Multiplicacion;
-            ObtenerValor("-");
+            ObtenerValor("x");
+        }
+
+        private void btnDivision_Click(object sender, EventArgs e)
+        {
+            operador = Operacion.Division;
+            ObtenerValor("/");
         }
     }
 }

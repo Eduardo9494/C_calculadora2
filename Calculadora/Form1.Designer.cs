@@ -246,6 +246,7 @@
             btnDivision.TabIndex = 17;
             btnDivision.Text = "/";
             btnDivision.UseVisualStyleBackColor = true;
+            btnDivision.Click += btnDivision_Click;
             // 
             // btnReset
             // 
