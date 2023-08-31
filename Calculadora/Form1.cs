@@ -38,16 +38,36 @@ namespace Calculadora
             }
 
         }
-        private double EjecutarOperacion(string operador)
+        private double EjecutarOperacion()
         {
             double resultado = 0;
             switch (operador)
             {
-                case "+":
+                case Operacion.Suma:
                     resultado = valor1 + valor2;
                     break;
-                case "-":
+
+                case Operacion.Resta:
                     resultado = valor1 - valor2;
+                    break;
+
+                case Operacion.Division:
+                    if (valor2 == 0)
+                    {
+                        MessageBox.Show("No se puede dividir entre 0 ");
+                    }
+                    else
+                    {
+                        resultado = valor1 / valor2;
+                    }
+                    break;
+
+                case Operacion.Multiplicacion:
+                    resultado = valor1 * valor2;
+                    break;
+
+                case Operacion.Modulo:
+                    resultado = valor1 % valor2;
                     break;
             }
             return resultado;
@@ -131,7 +151,7 @@ namespace Calculadora
             {
                 valor2 = Convert.ToDouble(cajaResultado.Text);
                 lblHistorial.Text += valor2 + "=";
-                double resultado = EjecutarOperacion("+");
+                double resultado = EjecutarOperacion();
                 valor1 = 0;
                 valor2 = 0;
                 cajaResultado.Text = Convert.ToString(resultado);
