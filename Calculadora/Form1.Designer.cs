@@ -236,6 +236,7 @@
             btnModulo.TabIndex = 16;
             btnModulo.Text = "%";
             btnModulo.UseVisualStyleBackColor = true;
+            btnModulo.Click += btnModulo_Click;
             // 
             // btnDivision
             // 

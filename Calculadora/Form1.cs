@@ -156,5 +156,12 @@ namespace Calculadora
             operador = Operacion.Division;
             ObtenerValor("/");
         }
+
+        private void btnModulo_Click(object sender, EventArgs e)
+        {
+            operador = Operacion.Modulo;
+            ObtenerValor("%");
+
+        }
     }
 }
