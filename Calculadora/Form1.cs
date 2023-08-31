@@ -144,5 +144,11 @@ namespace Calculadora
             ObtenerValor("-");
 
         }
+
+        private void btnMultiplicar_Click(object sender, EventArgs e)
+        {
+            operador = Operacion.Multiplicacion;
+            ObtenerValor("-");
+        }
     }
 }

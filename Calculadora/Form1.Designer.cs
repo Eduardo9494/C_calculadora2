@@ -192,6 +192,7 @@
             btnMultiplicar.TabIndex = 12;
             btnMultiplicar.Text = "x";
             btnMultiplicar.UseVisualStyleBackColor = true;
+            btnMultiplicar.Click += btnMultiplicar_Click;
             // 
             // btnResta
             // 
