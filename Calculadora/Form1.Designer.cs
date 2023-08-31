@@ -182,6 +182,7 @@
             btnPunto.TabIndex = 11;
             btnPunto.Text = ".";
             btnPunto.UseVisualStyleBackColor = true;
+            btnPunto.Click += btnPunto_Click;
             // 
             // btnMultiplicar
             // 

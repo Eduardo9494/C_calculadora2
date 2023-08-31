@@ -194,12 +194,12 @@ namespace Calculadora
 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
-            if ( cajaResultado.Text.Length > 1)
+            if (cajaResultado.Text.Length > 1)
             {
                 string txtResultado = cajaResultado.Text;
                 txtResultado = txtResultado.Substring(0, txtResultado.Length - 1);
 
-                if ( txtResultado.Length == 1 && txtResultado.Contains("-"))
+                if (txtResultado.Length == 1 && txtResultado.Contains("-"))
                 {
                     cajaResultado.Text = "0";
                 }
@@ -214,6 +214,16 @@ namespace Calculadora
             {
                 cajaResultado.Text = "0";
             }
+        }
+
+        private void btnPunto_Click(object sender, EventArgs e)
+        {
+            if (cajaResultado.Text.Contains("."))
+            {
+                return;
+
+            }
+            cajaResultado.Text += ".";
         }
     }
 }
