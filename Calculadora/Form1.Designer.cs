@@ -258,6 +258,7 @@
             btnReset.TabIndex = 18;
             btnReset.Text = "C";
             btnReset.UseVisualStyleBackColor = true;
+            btnReset.Click += btnReset_Click;
             // 
             // btnBorrar
             // 

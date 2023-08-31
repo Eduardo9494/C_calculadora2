@@ -184,5 +184,12 @@ namespace Calculadora
             ObtenerValor("%");
 
         }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            cajaResultado.Text = "0";
+            lblHistorial.Text = "";
+
+        }
     }
 }
