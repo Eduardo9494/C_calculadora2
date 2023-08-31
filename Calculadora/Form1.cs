@@ -34,8 +34,14 @@ namespace Calculadora
             double resultado = 0;
             switch (operador)
             {
-                default:
+                case "+":
+                    resultado = valor1 + valor2;
+                    break;
+                case "-":
+                    resultado = valor1 - valor2;
+                    break;
             }
+            return resultado;
         }
         private void btnCero_Click(object sender, EventArgs e)
         {
