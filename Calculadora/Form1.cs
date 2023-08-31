@@ -140,9 +140,8 @@ namespace Calculadora
 
         private void btnResta_Click(object sender, EventArgs e)
         {
-            valor1 = Convert.ToDouble(cajaResultado.Text);
-            lblHistorial.Text = cajaResultado.Text + "-";
-            cajaResultado.Text = "0";
+            operador = Operacion.Resta;
+            ObtenerValor("-");
 
         }
     }
