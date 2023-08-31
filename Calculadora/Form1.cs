@@ -2,6 +2,15 @@ namespace Calculadora
 {
     public partial class Form1 : Form
     {
+        public enum Operacion
+        {
+            NoDefinida = 0,
+            Suma = 1,
+            Resta = 2,
+            Division = 3,
+            Multiplicacion = 4,
+            Modulo = 5
+        }
 
         double valor1 = 0;
         double valor2 = 0;
@@ -29,7 +38,7 @@ namespace Calculadora
             }
 
         }
-         private double EjecutarOperacion(string operador)
+        private double EjecutarOperacion(string operador)
         {
             double resultado = 0;
             switch (operador)
@@ -114,11 +123,19 @@ namespace Calculadora
             {
                 valor2 = Convert.ToDouble(cajaResultado.Text);
                 lblHistorial.Text += valor2 + "=";
-                double resultado = valor1 + valor2;
+                double resultado = EjecutarOperacion("+");
                 valor1 = 0;
                 valor2 = 0;
                 cajaResultado.Text = Convert.ToString(resultado);
             }
+        }
+
+        private void btnResta_Click(object sender, EventArgs e)
+        {
+            valor1 = Convert.ToDouble(cajaResultado.Text);
+            lblHistorial.Text = cajaResultado.Text + "-";
+            cajaResultado.Text = "0";
+
         }
     }
 }

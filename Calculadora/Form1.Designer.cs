@@ -202,6 +202,7 @@
             btnResta.TabIndex = 13;
             btnResta.Text = "-";
             btnResta.UseVisualStyleBackColor = true;
+            btnResta.Click += btnResta_Click;
             // 
             // btnSuma
             // 
